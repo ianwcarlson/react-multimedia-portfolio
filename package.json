@@ -1,0 +1,52 @@
+{
+  "name": "react-multimedia-portfolio",
+  "version": "0.0.1",
+  "description": "personal website showcasing multimedia content",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "5.8.23",
+    "babel-loader": "5.3.2",
+    "babel-runtime": "5.8.24",
+    "classnames": "2.1.5",
+    "css-loader": "0.18.0",
+    "eslint": "1.3.1",
+    "eslint-loader": "1.0.0",
+    "extract-text-webpack-plugin": "0.8.2",
+    "file-loader": "0.8.4",
+    "lodash": "3.10.1",
+    "node-sass": "3.3.0",
+    "react": "^0.14.0",
+    "sass-loader": "2.0.1",
+    "style-loader": "0.12.3",
+    "url-loader": "0.5.6",
+    "webpack": "1.12.1"
+  },
+  "devDependencies": {
+    "esdoc": "0.2.5",
+    "eslint-plugin-react": "3.3.0",
+    "jasmine": "2.3.2",
+    "jasmine-core": "2.3.4",
+    "karma": "0.13.9",
+    "karma-chrome-launcher": "0.2.0",
+    "karma-coverage": "0.5.2",
+    "karma-jasmine": "0.3.6",
+    "karma-phantomjs-launcher": "0.2.1",
+    "karma-sourcemap-loader": "0.3.5",
+    "karma-webpack": "1.7.0",
+    "phantomjs": "1.9.18",
+    "webpack-dev-server": "1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwcarlson/react-multimedia-portfolio.git"
+  },
+  "author": "ianwcarlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianwcarlson/react-multimedia-portfolio/issues"
+  },
+  "homepage": "https://github.com/ianwcarlson/react-multimedia-portfolio#readme"
+}
