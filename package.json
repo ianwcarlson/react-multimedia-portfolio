@@ -13,7 +13,6 @@
     "eslint-loader": "1.0.0",
     "extract-text-webpack-plugin": "0.8.2",
     "file-loader": "0.8.4",
-    "lodash": "3.10.1",
     "node-sass": "3.3.0",
     "react": "^0.14.0",
     "sass-loader": "2.0.1",
@@ -37,7 +36,13 @@
     "webpack-dev-server": "1.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node_modules/.bin/esdoc -c ./esdoc.json",
+    "buildDev": "node_modules/.bin/webpack --progress --colors",
+    "buildProd": "node_modules/.bin/webpack --progress --colors --production",
+    "debugDev": "node_modules/.bin/webpack-dev-server --content-base devServer/app --port 3999",
+    "debugProd": "node_modules/.bin/webpack-dev-server --content-base devServer/app --port 3999 --production",
+    "test-react": "jest"
   },
   "repository": {
     "type": "git",
