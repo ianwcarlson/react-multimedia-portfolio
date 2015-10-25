@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactBootstrapGrid from 'react-bootstrap-grid';
+import {Col} from 'react-bootstrap';
+import {Panel} from 'react-bootstrap';
 
 class VideoCell extends React.Component{
     constructor(props){
@@ -9,16 +10,17 @@ class VideoCell extends React.Component{
     render(){
         let videoSrcUrl = "//player.vimeo.com/video/" + this.props.videoId;
         return(
-            <Column medium={4}>
-                <iframe
-                    src={videoSrcUrl}
-                    width="WIDTH"
-                    height="HEIGHT"
-                    frameborder="0"
-                    allowFullScreen>
-                </iframe>
-            </Column>
-        )
+            <Col sm={12} md={6} lg={4}>
+                <Panel>
+                    <iframe
+                        src={videoSrcUrl}
+                        height="350px"
+                        width="100%"
+                        allowFullScreen>
+                    </iframe>
+                </Panel>
+            </Col>
+        );
     }
 }
 

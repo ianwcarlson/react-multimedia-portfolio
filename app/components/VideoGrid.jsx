@@ -1,21 +1,22 @@
 import React from 'react';
-import ReactBootstrapGrid from 'react-bootstrap-grid';
+import {Row} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap';
 import VideoCell from './VideoCell.jsx';
 
-class VideoRow  extends React.Component{
+class VideoGrid  extends React.Component{
     constructor(props){
         super(props);
     }
 
     render(){
         return(
-            <Row>
+            <Grid fluid={false}>
                 <VideoCell videoId='128206143'/>
                 <VideoCell videoId='75579957'/>
                 <VideoCell videoId='61325801'/>
-            </Row>
-        )
+            </Grid>
+        );
     }
 }
 
-export default VideoRow;
+export default VideoGrid;

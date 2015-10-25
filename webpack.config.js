@@ -6,7 +6,8 @@ var node_modules = path.resolve(__dirname, 'node_modules');
 //var pathToReactDev = path.resolve(node_modules, 'react/dist/react.js');
 var pathToReactAddonsProd = path.resolve(node_modules, 'react/dist/react-with-addons.min.js');
 var pathToReactAddonsDev = path.resolve(node_modules, 'react/dist/react-with-addons.js');
-var pathToReactBootstrapGridDev = path.resolve(node_modules, 'react-bootstrap-grid/dist/build.js');
+var pathToReactBootstrapGridDev = path.resolve(node_modules, 'react-bootstrap/dist/react-bootstrap.js');
+var pathToBootstrapCss = path.resolve(node_modules, 'bootstrap/dist/css/bootstrap.css');
 
 var PROD = findProductionOption();
 
@@ -14,8 +15,9 @@ module.exports = {
     context: __dirname,
     resolve: {
         alias: {
-            'react': PROD ? pathToReactAddonsProd : pathToReactAddonsDev,
-            'react-bootstrap-grid': pathToReactBootstrapGridDev
+            //'react': PROD ? pathToReactAddonsProd : pathToReactAddonsDev,
+            //'react-bootstrap': pathToReactBootstrapGridDev
+            'bootstrap-css': pathToBootstrapCss
         }
     },
     entry: {
@@ -27,7 +29,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist',
-        publicPath: './assets/',
+        publicPath: '/assets',
         filename: PROD ? '[name].bundle.min.js' : '[name].bundle.js'
     },
     plugins: PROD ? [
@@ -77,7 +79,7 @@ module.exports = {
                 loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]'
             },
             {
-                test: /\.(ttf|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "url-loader?limit=150000&mimetype=application/font-woff"
                 //loader : 'url?limit=200000'
             }
